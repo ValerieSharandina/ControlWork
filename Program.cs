@@ -24,7 +24,7 @@ void FillArray(string[] newArray)
 
 }
 
-void PrintArray (int[] arrayToPrint)
+void PrintArray (string[] arrayToPrint)
 {
     Console.ForegroundColor=ConsoleColor.Green;
     Console.WriteLine("---------------------------");
@@ -41,6 +41,7 @@ void PrintArray (int[] arrayToPrint)
     Console.WriteLine("]");
     Console.ForegroundColor=ConsoleColor.Green;
     Console.WriteLine("---------------------------");
+    Console.ForegroundColor=ConsoleColor.White;
     Console.WriteLine();
 }
 
@@ -51,6 +52,7 @@ string[] FindShortElement(string[] shortElement)
     string element = String.Empty;
     for (int i = 0; i < shortElement.Length; i++)
     {
+        element = shortElement[i];
         if (element.Length < 4)
         {
             count++;
@@ -70,3 +72,14 @@ string[] FindShortElement(string[] shortElement)
     }
     return resultArray;
 }
+
+System.Console.Write("Введите размер массива: ");
+int sizeArray = Convert.ToInt32(Console.ReadLine());
+string[] array = new string[sizeArray];
+FillArray(array);
+string[] resultArray = FindShortElement(array);
+Console.WriteLine("Исходный массив: ");
+PrintArray(array);
+Console.WriteLine();
+Console.WriteLine("Итоговый массив");
+PrintArray(resultArray);
