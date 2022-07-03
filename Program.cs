@@ -13,3 +13,13 @@
 ["Russia", "Denmark", "Kazan"] -> []
 */
 
+void FillArray(string[] newArray)
+{
+    System.Console.Write("Задайте элементы массива:  ");
+    for (int i = 0; i < newArray.Length; i++)
+    {
+        System.Console.Write($"[{i}]"); ;
+        newArray[i] = Console.ReadLine()!;
+    }
+
+}
