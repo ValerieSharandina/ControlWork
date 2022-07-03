@@ -13,7 +13,7 @@
 ["Russia", "Denmark", "Kazan"] -> []
 */
 
-void FillArray(string[] newArray)
+void FillArray(string[] newArray) 
 {
     System.Console.Write("Задайте элементы массива:  ");
     for (int i = 0; i < newArray.Length; i++)
@@ -22,4 +22,24 @@ void FillArray(string[] newArray)
         newArray[i] = Console.ReadLine()!;
     }
 
+}
+
+void PrintArray (int[] arrayToPrint)
+{
+    Console.ForegroundColor=ConsoleColor.Green;
+    Console.WriteLine("---------------------------");
+    Console.ForegroundColor=ConsoleColor.White;
+    Console.Write("[");
+    for (var i = 0; i < arrayToPrint.Length; i++)
+    {
+        Console.Write(arrayToPrint[i]);
+        if(i != arrayToPrint.Length -1)
+        {
+            Console.Write(", ");
+        }
+    }
+    Console.WriteLine("]");
+    Console.ForegroundColor=ConsoleColor.Green;
+    Console.WriteLine("---------------------------");
+    Console.WriteLine();
 }
