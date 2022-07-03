@@ -43,3 +43,30 @@ void PrintArray (int[] arrayToPrint)
     Console.WriteLine("---------------------------");
     Console.WriteLine();
 }
+
+string[] FindShortElement(string[] shortElement)
+{
+
+    int count = 0;
+    string element = String.Empty;
+    for (int i = 0; i < shortElement.Length; i++)
+    {
+        if (element.Length < 4)
+        {
+            count++;
+        }
+    }
+    string[] resultArray = new string[count];
+    count = 0;
+    for (int i = 0; i < shortElement.Length; i++)
+    {
+       
+        element = shortElement[i];
+        if (element.Length <= 3)
+        {
+            resultArray[count] = element;
+            count++;
+        }
+    }
+    return resultArray;
+}
